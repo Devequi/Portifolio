@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Felipe Devequi | Portfólio</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         FUNDO ANIMADO (THREE.JS)
+    ========================================== -->
+
+    <div id="three-bg" aria-hidden="true"></div>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#aboutMe" class="logo">
+                &lt;Devq /&gt;
+            </a>
+
+
+            <div class="navLinks">
+
+                <a href="#aboutMe">
+                    Sobre
+                </a>
+
+                <a href="#skills">
+                    Skills
+                </a>
+
+                <a href="#projetos">
+                    Projetos
+                </a>
+
+                <a href="#formacao">
+                    Formação
+                </a>
+
+                <a href="#certificacoes">
+                    Certificações
+                </a>
+
+            </div>
+
+
+            <div class="acoesNav">
+
+                <button
+                    id="botaoTema"
+                    type="button"
+                    aria-label="Alterar tema"
+                    title="Alterar tema"
+                >
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+
+
+                <button
+                    id="botaoMenu"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    title="Menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+
+    <main class="sectionPrincipal">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside id="contatos">
+
+            <div class="perfil">
+
+                <div class="fotoPerfil">
+                    FD
+                </div>
+
+                <h1>
+                    Felipe Devequi
+                </h1>
+
+                <span class="cargo">
+                    Desenvolvedor em formação
+                </span>
+
+            </div>
+
+
+            <div class="linha"></div>
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="informacoes">
+
+
+                <!-- EMAIL -->
+
+                <div class="info">
+
+                    <div class="iconeInfo">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Email
+                        </span>
+
+                        <a href="mailto:devkzz559@email.com">
+                            devkzz559@email.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCALIZAÇÃO -->
+
+                <div class="info">
+
+                    <div class="iconeInfo">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Localização
+                        </span>
+
+                        <p>
+                            São Paulo, Brasil
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GITHUB -->
+
+                <div class="info">
+
+                    <div class="iconeInfo">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            GitHub
+                        </span>
+
+                        <a
+                            href="https://github.com/Devequi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            github.com/Devequi
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LINKEDIN -->
+
+                <div class="info">
+
+                    <div class="iconeInfo">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            LinkedIn
+                        </span>
+
+                        <a
+                            href="https://www.linkedin.com/in/felipe-devequi-435a28408/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Felipe Devequi
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CODEWARS -->
+
+                <div class="info">
+
+                    <div class="iconeInfo">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Codewars
+                        </span>
+
+                        <a
+                            href="https://www.codewars.com/users/Devequi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Devequi
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- REDES -->
+
+            <div class="redes">
+
+                <a
+                    href="https://github.com/Devequi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/felipe-devequi-435a28408/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+
+                <a
+                    href="https://www.codewars.com/users/Devequi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Codewars"
+                >
+                    <i class="fa-solid fa-code"></i>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             CONTEÚDO
+        ====================================== -->
+
+        <div id="conteudo">
+
+
+            <!-- =================================
+                 SOBRE
+            ================================== -->
+
+            <section id="aboutMe">
+
+                <div id="hero3d" aria-hidden="true"></div>
+
+                <span class="subtitulo">
+                    Olá, eu sou
+                </span>
+
+                <h1>
+                    Felipe Devequi.
+                </h1>
+
+                <h2>
+                    Estudante de Desenvolvimento de Sistemas
+                </h2>
+
+
+                <p>
+                    Sou estudante de Desenvolvimento de Sistemas
+                    e venho construindo projetos para desenvolver
+                    minhas habilidades em programação e desenvolvimento web.
+                </p>
+
+
+                <p>
+                    Atualmente estudo principalmente
+                    <strong>JavaScript</strong>,
+                    além de Git, GitHub, APIs, banco de dados,
+                    React e Node.js.
+                </p>
+
+
+                <p>
+                    Também tenho interesse em redes e
+                    cibersegurança, buscando entender não apenas
+                    como desenvolver aplicações, mas também como
+                    os sistemas funcionam por trás delas.
+                </p>
+
+
+                <div class="botoesAbout">
+
+                    <a
+                        href="#projetos"
+                        class="botaoPrincipal"
+                    >
+                        <i class="fa-solid fa-code"></i>
+
+                        Ver projetos
+                    </a>
+
+
+                    <a
+                        href="https://github.com/Devequi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botaoSecundario"
+                    >
+                        <i class="fa-brands fa-github"></i>
+
+                        GitHub
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 ESTUDANDO
+            ================================== -->
+
+            <section
+                id="estudando"
+                class="revelar"
+            >
+
+                <div class="tituloSecao">
+
+                    <span>
+                        01.
+                    </span>
+
+                    <h2>
+                        Estudando agora
+                    </h2>
+
+                </div>
+
+
+                <div class="roadmap">
+
+                    <span class="roadmapItem ativo">
+                        JavaScript
+                    </span>
+
+                    <span class="roadmapItem">
+                        React
+                    </span>
+
+                    <span class="roadmapItem">
+                        Node.js
+                    </span>
+
+                    <span class="roadmapItem">
+                        APIs
+                    </span>
+
+                    <span class="roadmapItem">
+                        Banco de Dados
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 SKILLS
+            ================================== -->
+
+            <section
+                id="skills"
+                class="revelar"
+            >
+
+                <div class="tituloSecao">
+
+                    <span>
+                        02.
+                    </span>
+
+                    <h2>
+                        Skills
+                    </h2>
+
+                </div>
+
+
+                <div class="gridSkills">
+
+
+                    <!-- FRONT-END -->
+
+                    <article class="skillCard">
+
+                        <div class="skillTitulo">
+
+                            <i class="fa-solid fa-code"></i>
+
+                            <h3>
+                                Front-end
+                            </h3>
+
+                        </div>
+
+
+                        <div class="skillLista">
+
+                            <span>HTML</span>
+
+                            <span>CSS</span>
+
+                            <span>JavaScript</span>
+
+                            <span>React</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BACK-END -->
+
+                    <article class="skillCard">
+
+                        <div class="skillTitulo">
+
+                            <i class="fa-solid fa-server"></i>
+
+                            <h3>
+                                Back-end
+                            </h3>
+
+                        </div>
+
+
+                        <div class="skillLista">
+
+                            <span>Node.js</span>
+
+                            <span>Express</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BANCO -->
+
+                    <article class="skillCard">
+
+                        <div class="skillTitulo">
+
+                            <i class="fa-solid fa-database"></i>
+
+                            <h3>
+                                Banco de Dados
+                            </h3>
+
+                        </div>
+
+
+                        <div class="skillLista">
+
+                            <span>MySQL</span>
+
+                            <span>Prisma</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FERRAMENTAS -->
+
+                    <article class="skillCard">
+
+                        <div class="skillTitulo">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            <h3>
+                                Ferramentas
+                            </h3>
+
+                        </div>
+
+
+                        <div class="skillLista">
+
+                            <span>Git</span>
+
+                            <span>GitHub</span>
+
+                            <span>VS Code</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- OUTROS -->
+
+                    <article class="skillCard">
+
+                        <div class="skillTitulo">
+
+                            <i class="fa-solid fa-network-wired"></i>
+
+                            <h3>
+                                Outros estudos
+                            </h3>
+
+                        </div>
+
+
+                        <div class="skillLista">
+
+                            <span>Redes</span>
+
+                            <span>Cibersegurança</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PROJETOS
+            ================================== -->
+
+            <section
+                id="projetos"
+                class="revelar"
+            >
+
+                <div class="tituloSecao">
+
+                    <span>
+                        03.
+                    </span>
+
+                    <h2>
+                        Projetos
+                    </h2>
+
+                </div>
+
+
+                <!-- FILTROS -->
+
+                <div class="filtrosProjetos">
+
+                    <button
+                        class="filtro filtroAtivo"
+                        data-filtro="todos"
+                    >
+                        Todos
+                    </button>
+
+                    <button
+                        class="filtro"
+                        data-filtro="javascript"
+                    >
+                        JavaScript
+                    </button>
+
+                    <button
+                        class="filtro"
+                        data-filtro="react"
+                    >
+                        React
+                    </button>
+
+                    <button
+                        class="filtro"
+                        data-filtro="node"
+                    >
+                        Node.js
+                    </button>
+
+                </div>
+
+
+
+                <div class="gridProjetos">
+
+
+                    <!-- WEBKORE -->
+
+                    <article
+                        class="projeto"
+                        data-tecnologias="react node express mysql prisma"
+                    >
+
+                        <div class="imagemProjeto">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </div>
+
+
+                        <div class="projetoConteudo">
+
+                            <div class="projetoTopo">
+
+                                <h3>
+                                    WebKore
+                                </h3>
+
+
+                                <div>
+
+                                    <a
+                                        href="#"
+                                        aria-label="GitHub do WebKore"
+                                    >
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                    <a
+                                        href="#"
+                                        aria-label="Abrir WebKore"
+                                    >
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <p>
+                                Aplicação web esportiva desenvolvida
+                                com React e Vite no front-end e uma
+                                API Express integrada a MySQL através
+                                do Prisma.
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span>React</span>
+
+                                <span>Node.js</span>
+
+                                <span>Express</span>
+
+                                <span>MySQL</span>
+
+                                <span>Prisma</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SISTEMA UFC -->
+
+                    <article
+                        class="projeto"
+                        data-tecnologias="javascript node"
+                    >
+
+                        <div class="imagemProjeto">
+
+                            <i class="fa-solid fa-ranking-star"></i>
+
+                        </div>
+
+
+                        <div class="projetoConteudo">
+
+                            <div class="projetoTopo">
+
+                                <h3>
+                                    Sistema UFC
+                                </h3>
+
+
+                                <div>
+
+                                    <a
+                                        href="#"
+                                        aria-label="GitHub do Sistema UFC"
+                                    >
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <p>
+                                Sistema em JavaScript para armazenar,
+                                buscar e analisar lutadores, incluindo
+                                cálculo de taxa de vitória e comparação
+                                de cartéis.
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span>JavaScript</span>
+
+                                <span>Node.js</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- JOGO DE ADIVINHAÇÃO -->
+
+                    <article
+                        class="projeto"
+                        data-tecnologias="javascript node"
+                    >
+
+                        <div class="imagemProjeto">
+
+                            <i class="fa-solid fa-gamepad"></i>
+
+                        </div>
+
+
+                        <div class="projetoConteudo">
+
+                            <div class="projetoTopo">
+
+                                <h3>
+                                    Jogo de Adivinhação
+                                </h3>
+
+
+                                <div>
+
+                                    <a
+                                        href="#"
+                                        aria-label="GitHub do Jogo de Adivinhação"
+                                    >
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <p>
+                                Jogo desenvolvido em JavaScript
+                                utilizando Node.js, com níveis de
+                                dificuldade, sistema de tentativas
+                                e opção para jogar novamente.
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span>JavaScript</span>
+
+                                <span>Node.js</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <a
+                    href="https://github.com/Devequi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="verTodos"
+                >
+                    Ver todos no GitHub
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </section>
+
+
+
+            <!-- =================================
+                 FORMAÇÃO
+            ================================== -->
+
+            <section
+                id="formacao"
+                class="revelar"
+            >
+
+                <div class="tituloSecao">
+
+                    <span>
+                        04.
+                    </span>
+
+                    <h2>
+                        Formação
+                    </h2>
+
+                </div>
+
+
+                <div class="timeline">
+
+                    <article class="timelineItem">
+
+                        <div class="timelinePonto"></div>
+
+
+                        <div class="timelineConteudo">
+
+                            <span class="data">
+                                Em andamento
+                            </span>
+
+                            <h3>
+                                Desenvolvimento de Sistemas
+                            </h3>
+
+                            <p>
+                                ETEC
+                            </p>
+
+
+                            <p class="descricao">
+                                Formação técnica voltada para
+                                desenvolvimento de software,
+                                programação, banco de dados e
+                                desenvolvimento de sistemas.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 CERTIFICAÇÕES
+            ================================== -->
+
+            <section
+                id="certificacoes"
+                class="revelar"
+            >
+
+                <div class="tituloSecao">
+
+                    <span>
+                        05.
+                    </span>
+
+                    <h2>
+                        Certificações
+                    </h2>
+
+                </div>
+
+
+                <div class="gridCertificados">
+
+
+                    <!-- GITHUB -->
+
+                    <article class="certificado">
+
+                        <div class="certificadoIcone">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                GitHub Foundations
+                            </h3>
+
+                            <p>
+                                GitHub
+                            </p>
+
+                            <span>
+                                Em andamento
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- FREECODECAMP -->
+
+                    <article class="certificado">
+
+                        <div class="certificadoIcone">
+
+                            <i class="fa-brands fa-js"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                JavaScript
+                            </h3>
+
+                            <p>
+                                freeCodeCamp
+                            </p>
+
+                            <span>
+                                Em andamento
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 CONTATO FINAL
+            ================================== -->
+
+            <section
+                id="contatoFinal"
+                class="revelar"
+            >
+
+                <span>
+                    06. Contato
+                </span>
+
+                <h2>
+                    Tem algum projeto em mente?
+                </h2>
+
+
+                <p>
+                    Estou aberto a oportunidades para aprender,
+                    desenvolver projetos e adquirir experiência
+                    na área de tecnologia.
+                </p>
+
+
+                <a
+                    href="mailto:devkzz559@email.com"
+                    class="botaoPrincipal"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Vamos conversar
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        Desenvolvido por
+        <strong>Felipe Devequi</strong>
+        • 2026
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="scripts/three-efeitos.js"></script>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>
