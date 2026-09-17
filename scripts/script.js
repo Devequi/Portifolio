@@ -207,7 +207,7 @@ if ("IntersectionObserver" in window) {
         },
 
         {
-            threshold: 0.15
+            threshold: 0.50
         }
 
     );
@@ -314,7 +314,7 @@ if (typeof THREE !== "undefined") {
         const camera = new THREE.PerspectiveCamera(
             60,
             largura / altura,
-            1,
+            10,
             2000
         );
         camera.position.z = 500;
@@ -425,7 +425,7 @@ if (typeof THREE !== "undefined") {
 
         window.addEventListener("mousemove", evento => {
 
-            mouseX = (evento.clientX / window.innerWidth - 0.5) * 2;
+            mouseX = (evento.clientX / window.innerWidth - 0.05) * 2;
             mouseY = (evento.clientY / window.innerHeight - 0.05) * 2;
 
         });
