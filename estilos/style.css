@@ -1330,6 +1330,350 @@ body.lightMode .imagemProjeto {
 }
 
 
+
+/* ==================================================
+   ABERTURA CINEMATOGRÁFICA / SCROLL-DRIVEN
+================================================== */
+
+#introScroll {
+    position: relative;
+    height: 230vh;
+    z-index: 5;
+}
+
+.introSticky {
+    --intro-progress: 0;
+
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 50% 46%,
+            color-mix(in srgb, var(--accent) 13%, transparent),
+            transparent 38%
+        );
+}
+
+.introSticky::before,
+.introSticky::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.introSticky::before {
+    z-index: -1;
+    opacity: calc(0.08 + (var(--intro-progress) * 0.15));
+
+    background-image:
+        linear-gradient(var(--borda) 1px, transparent 1px),
+        linear-gradient(90deg, var(--borda) 1px, transparent 1px);
+    background-size: 58px 58px;
+
+    transform: perspective(900px)
+        rotateX(calc(60deg - (var(--intro-progress) * 18deg)))
+        scale(calc(1.35 - (var(--intro-progress) * 0.25)));
+}
+
+.introSticky::after {
+    background: linear-gradient(
+        to bottom,
+        transparent 65%,
+        var(--background) 100%
+    );
+}
+
+.introEyebrow {
+    position: absolute;
+    top: 105px;
+    left: 6vw;
+
+    color: var(--texto-fraco);
+    font-family: monospace;
+    font-size: clamp(0.65rem, 1vw, 0.8rem);
+    letter-spacing: 0.22em;
+
+    opacity: calc(1 - (var(--intro-progress) * 1.5));
+    transform: translateY(calc(var(--intro-progress) * -25px));
+}
+
+.introTitulo {
+    width: 100%;
+    padding: 0 4vw;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: clamp(4rem, 13vw, 12rem);
+    font-weight: 900;
+    line-height: 0.78;
+    letter-spacing: -0.075em;
+
+    user-select: none;
+    pointer-events: none;
+}
+
+.introTitulo span {
+    display: block;
+    will-change: transform, opacity;
+}
+
+.introMeu {
+    align-self: flex-start;
+
+    transform:
+        translateX(calc(var(--intro-progress) * -36vw))
+        rotate(calc(var(--intro-progress) * -4deg));
+
+    opacity: calc(1 - (var(--intro-progress) * 0.65));
+}
+
+.introPortfolio {
+    align-self: flex-end;
+
+    color: transparent;
+    -webkit-text-stroke: 1px var(--texto);
+
+    transform:
+        translateX(calc(var(--intro-progress) * 38vw))
+        rotate(calc(var(--intro-progress) * 4deg));
+
+    opacity: calc(1 - (var(--intro-progress) * 0.65));
+}
+
+.introCentro {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    text-align: center;
+
+    transform: translateY(calc(var(--intro-progress) * -24px));
+}
+
+.introCentro span {
+    color: var(--accent-claro);
+    font-family: monospace;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: bold;
+}
+
+.introCentro p {
+    color: var(--texto-fraco);
+    font-family: monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+
+    opacity: calc(1 - (var(--intro-progress) * 2));
+}
+
+.introCentro i {
+    margin-top: 5px;
+
+    color: var(--texto-secundario);
+    font-size: 0.75rem;
+
+    animation: introSeta 1.25s ease-in-out infinite;
+    opacity: calc(1 - (var(--intro-progress) * 2));
+}
+
+@keyframes introSeta {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+.introLinha {
+    position: absolute;
+    left: 6vw;
+    right: 6vw;
+    bottom: 55px;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--accent),
+        var(--borda),
+        transparent
+    );
+
+    transform-origin: left center;
+    transform: scaleX(calc(0.12 + (var(--intro-progress) * 0.88)));
+    opacity: 0.8;
+}
+
+.portfolioPrincipal {
+    position: relative;
+    z-index: 10;
+}
+
+/* ==================================================
+   REVEALS COM PERSONALIDADE
+================================================== */
+
+.revelar {
+    opacity: 0;
+    filter: blur(7px);
+    transition:
+        opacity 0.85s cubic-bezier(.2,.8,.2,1),
+        transform 0.95s cubic-bezier(.2,.8,.2,1),
+        filter 0.75s ease;
+    will-change: transform, opacity;
+}
+
+.revelarEsquerda {
+    transform: translate3d(-70px, 30px, 0) rotate(-1.5deg);
+}
+
+.revelarDireita {
+    transform: translate3d(70px, 30px, 0) rotate(1.5deg);
+}
+
+.revelarZoom {
+    transform: translate3d(0, 65px, 0) scale(0.94);
+}
+
+.revelar.visivel {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) rotate(0) scale(1);
+}
+
+/* Entrada em cascata dos cards */
+.revelar.visivel .skillCard,
+.revelar.visivel .certificado,
+.revelar.visivel .projeto,
+.revelar.visivel .roadmapItem {
+    animation: cardEntrada 0.65s both cubic-bezier(.2,.8,.2,1);
+}
+
+.revelar.visivel .skillCard:nth-child(2),
+.revelar.visivel .certificado:nth-child(2),
+.revelar.visivel .roadmapItem:nth-of-type(2) { animation-delay: 80ms; }
+
+.revelar.visivel .skillCard:nth-child(3),
+.revelar.visivel .certificado:nth-child(3),
+.revelar.visivel .roadmapItem:nth-of-type(3) { animation-delay: 160ms; }
+
+.revelar.visivel .skillCard:nth-child(4),
+.revelar.visivel .certificado:nth-child(4),
+.revelar.visivel .roadmapItem:nth-of-type(4) { animation-delay: 240ms; }
+
+.revelar.visivel .skillCard:nth-child(5),
+.revelar.visivel .roadmapItem:nth-of-type(5) { animation-delay: 320ms; }
+
+@keyframes cardEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(28px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Projeto reage levemente ao scroll */
+.projeto {
+    --projeto-y: 0px;
+    --projeto-rotacao: 0deg;
+
+    transform:
+        translate3d(0, var(--projeto-y), 0)
+        rotate(var(--projeto-rotacao));
+
+    will-change: transform;
+}
+
+.projeto:hover {
+    transform:
+        translate3d(0, calc(var(--projeto-y) - 5px), 0)
+        rotate(var(--projeto-rotacao));
+}
+
+/* Linha do título cresce quando a seção aparece */
+.revelar .tituloSecao::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.85s 0.18s cubic-bezier(.2,.8,.2,1);
+}
+
+.revelar.visivel .tituloSecao::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 950px) {
+    #introScroll {
+        height: 190vh;
+    }
+
+    .introSticky {
+        min-height: 520px;
+    }
+
+    .introMeu {
+        transform: translateX(calc(var(--intro-progress) * -44vw));
+    }
+
+    .introPortfolio {
+        transform: translateX(calc(var(--intro-progress) * 44vw));
+    }
+}
+
+@media (max-width: 700px) {
+    #introScroll {
+        height: 165vh;
+    }
+
+    .introSticky {
+        min-height: 470px;
+    }
+
+    .introTitulo {
+        padding: 0 5vw;
+        font-size: clamp(3rem, 17vw, 6rem);
+        line-height: 0.88;
+    }
+
+    .introPortfolio {
+        align-self: flex-start;
+        margin-left: 8vw;
+    }
+
+    .introEyebrow {
+        top: 92px;
+    }
+
+    .introLinha {
+        bottom: 34px;
+    }
+
+    .revelarEsquerda,
+    .revelarDireita {
+        transform: translate3d(0, 42px, 0);
+    }
+}
+
 /* ==================================================
    FOOTER
 ================================================== */
@@ -1528,5 +1872,25 @@ footer strong {
         transform: none;
 
         transition: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #introScroll {
+        height: 100vh;
+    }
+
+    .introSticky {
+        position: relative;
+        --intro-progress: 0 !important;
+    }
+
+    .introCentro i {
+        animation: none;
+    }
+
+    .projeto {
+        --projeto-y: 0px !important;
+        --projeto-rotacao: 0deg !important;
     }
 }
